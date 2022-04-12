@@ -1,0 +1,139 @@
+body {
+	font-family: 'Open Sans';
+	background-color: #fff;
+}
+* {
+	outline:0;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+.color-coding {
+	padding: 35px 15px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+
+}
+.color-coding p {
+	text-align: center;
+}
+.color-coding .icon-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0 auto 50px;
+}
+.color-coding .icon-wrapper .icon-list {
+	text-align: center;
+	padding: 0 2px;
+	transition: all 0.3s;
+}
+.color-coding .icon-wrapper .icon-list .color-text {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s;
+}
+.color-coding .icon-wrapper .icon-list .color-text.active {
+	visibility: visible;
+	opacity: 1;
+	transition:  all 0.5s;
+}
+.color-coding .icon-wrapper .icon-list .circle:hover + .color-text {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5;
+}
+.color-coding .icon-wrapper .icon-list .circle  {
+	border-radius: 50%;
+	height: 30px;
+	width: 30px;
+	border: 1px solid;
+	display: block;
+	margin: 0 auto 5px;
+	cursor: pointer;
+}
+.color-coding .icon-wrapper .icon-list .square  {
+	height: 30px;
+	width: 30px;
+	border: 1px solid;
+	display: block;
+	margin: 5px auto;
+	cursor: pointer;
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.3s;
+}
+.color-coding .icon-wrapper .icon-list .square.active {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s;
+}
+.color-coding .icon-wrapper .icon-list .square.red,
+.color-coding .icon-wrapper .icon-list .circle.red {
+	background-color: red;
+	border-color: red;
+}
+.color-coding .icon-wrapper .icon-list .square.green,
+.color-coding .icon-wrapper .icon-list .circle.green {
+	background-color: green;
+	border-color: green;
+}
+.color-coding .icon-wrapper .icon-list .square.blue,
+.color-coding .icon-wrapper .icon-list .circle.blue {
+	background-color: blue;
+	border-color: blue;
+}
+.color-coding .icon-wrapper .icon-list .square.orange,
+.color-coding .icon-wrapper .icon-list .circle.orange {
+	background-color: orange;
+	border-color: orange;
+}
+.color-coding .icon-wrapper .icon-list .square.yellow,
+.color-coding .icon-wrapper .icon-list .circle.yellow {
+	background-color: yellow;
+	border-color: yellow;
+}
+body.active-hover-square .color-coding .icon-wrapper .icon-list .square,
+body.active-hover .color-coding .icon-wrapper .icon-list .circle {
+	opacity: 50%;
+	transition: all 0.3s;
+}
+body.active-hover-square .color-coding .icon-wrapper .icon-list .square.active-square,
+body.active-hover .color-coding .icon-wrapper .icon-list .circle.active-circle {
+	opacity: 1;
+	transition: all 0.3s;
+}
+
+@media (min-width: 576px) {
+	.color-coding {
+		max-width: 540px;
+	}
+	body {
+		background-color: #000;
+	}
+	.color-coding .icon-wrapper .icon-list .color-text {
+		color: #fff;
+	}
+	.color-coding p {
+		color: #fff;
+	}
+}
+@media (min-width: 768px) {
+	.color-coding {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.color-coding {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.color-coding {
+		max-width: 1140px;
+	}
+
+}
