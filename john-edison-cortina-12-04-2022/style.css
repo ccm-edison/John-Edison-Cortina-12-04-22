@@ -108,6 +108,9 @@ body.active-hover .color-coding .icon-wrapper .icon-list .circle.active-circle {
 }
 
 @media (min-width: 576px) {
+	.color-coding .icon-wrapper .icon-list {
+		padding: 0 6px;
+	}
 	.color-coding {
 		max-width: 540px;
 	}
